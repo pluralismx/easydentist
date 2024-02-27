@@ -1,0 +1,101 @@
+:root {
+    --basic: #F9EFED;
+    --deep: #5E877F;
+    --accent: #DEB734;
+    --light: #ADC2BD;
+}
+
+@font-face{
+    font-family: 'Regular';
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: 'Regular';
+    background-color: #ADC2BD;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Inputs */
+
+input[type="text"],
+input[type="number"],
+input[type="email"]{
+    padding: .5rem;
+    border:none;
+    border-bottom: 2px solid var(--deep);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"]:focus{
+    outline: none;
+}
+
+/* Buttons */
+
+.btn-deep {
+    border: 1px solid #666;
+    background-color: var(--deep);
+    padding: 4px 6px;
+    color: var(--basic);
+    border-radius: 2px;
+}
+
+.btn-deep:hover {
+    cursor: pointer;
+    background-color: var(--accent);
+    color: #444;
+}
+
+.btn-accent {
+    border: 1px solid #666;
+    background-color: var(--accent);
+    padding: 4px 6px;
+    color: #444;
+    border-radius: 2px;
+}
+
+.btn-accent:hover {
+    cursor: pointer;
+    background-color: #888;
+    color: var(--basic);
+}
+
+.btn-basic {
+    border: 1px solid #666;
+    background-color: var(--basic);
+    padding: 4px 6px;
+    color: #444;
+    border-radius: 2px;
+
+}
+
+.btn-basic:hover {
+    cursor: pointer;
+    background-color: #888;
+    color: var(--basic);
+}
+
+/* Modal */
+
+.modal-screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(10, 10, 10, .8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+
