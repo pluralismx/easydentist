@@ -57,7 +57,7 @@
         <div class="estimate-treatments-container">
             <!-- Header -->
             <div class="estimate-treatments-header">
-                <p>Elija los servicios para el presupuesto</p>
+                <p>Tratamientos añadidos</p>
                 <select v-model="currency">
                     <option value="mx">pesos</option>
                     <option value="usd">dólares</option>

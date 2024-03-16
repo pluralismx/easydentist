@@ -1,7 +1,7 @@
 <template>
     <div @click="removeFromInvoice()" class="treatment-card-container">
-        <div class="item-qty-chip">
-            <span>{{ qty }}</span>
+        <div id="numberCircle" :class="{ 'glowing': glow }" class="item-qty-chip">
+            <span >{{ qty }}</span>
         </div>
         <p>{{ name }} - ${{ price }}&nbsp;c/u</p>
         <p>-</p>
@@ -31,6 +31,7 @@
                 fees_mx: null,
                 fees_usd: null,
                 qty: null,
+                glow: false
             }
         },
         computed: {
@@ -62,6 +63,7 @@
                     this.fees_mx = newVal.fees_mx;
                     this.fees_usd = newVal.fees_usd;
                     this.qty = newVal.qty;
+                    this.textGlow();
                 },
                 deep: true,
                 immediate: true
@@ -77,6 +79,16 @@
             removeFromInvoice(){
                 let id = this.id;
                 this.$emit('treatment-removed', id);
+            },
+            textGlow(){
+                
+                if(this.qty > 1){
+                    this.glow=true;
+                    setTimeout(()=>{
+                        this.glow=false;
+                    }, 107);
+                }
+
             }
         }
     }
@@ -97,20 +109,24 @@
     .item-qty-chip{
         border-radius: 50%;
         background-color: var(--accent);
-        width: 18px;
+        width: 2rem;
         text-align: center;
-        height: 18px;
+        height: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-self: center;
         transform: translateX(-5px);
+        
     }
+
 
     .item-qty-chip span {
         margin-top: 2px;
-        font-size: 12px;
+        font-size: 18px;
         color: #444;
+        transform: translateX(-3px);
+        transform: translateY(3px);
     }
 
     .treatment-card-container:hover{
@@ -120,6 +136,10 @@
 
     .treatment-card-container p{
         margin: 0;
+    }
+
+    .glowing {
+        background-color: var(--basic);
     }
 
 

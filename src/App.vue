@@ -38,9 +38,9 @@
             loadTreatments(){
                 axios.get('http://localhost/clinica_dental/service/records')
                      .then( res => {
-                        if(res.data.status == 'succes'){
-                            this.treatments = res.data.records;
-                            //console.log(this.treatments);
+                        if(res.data.status == 'success'){
+                            this.treatments = res.data.services;
+                            console.log(this.treatments);
                         }
                      }).catch( error=> {
                         console.log(error);

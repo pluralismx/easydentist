@@ -64,13 +64,13 @@
     .treatment-card-container{
         background-color: var(--deep);
         box-shadow: 3px 3px 4px #222;
-        padding: 4px 12px;
+        padding: 10px 12px;
         margin-bottom: .5rem;
         border-radius: 1rem;
         display: flex;
         justify-content: space-between;
         color: var(--basic);
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .treatment-card-container:hover{

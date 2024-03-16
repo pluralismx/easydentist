@@ -165,6 +165,11 @@
         border: 1px solid black;
         padding: 6px;
     }
+
+    table th {
+        background-color: var(--deep);
+        color: var(--basic)
+    }
     
     .preview-footer{
         padding: 1rem;

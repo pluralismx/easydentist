@@ -4,7 +4,7 @@
         <div class="form-container">
             
             <div class="field-block">
-                <label>Name:</label>
+                <label>Tratamiento:</label>
                 <input type="text" v-model="this.name">
             </div>
 
